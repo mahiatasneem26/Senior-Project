@@ -1,0 +1,1 @@
+{"p":["firststop","lib/pages/data_page.dart"],"s":[["firststop","lib/pages/data_page.dart"]],"d":[["firebase","lib/firebase.dart"],["firststop","lib/models/User.dart"],["firststop","lib/utils/centered_view.dart"],["flutter","lib/gestures.dart"],["flutter","lib/material.dart"]],"m":false,"is":true,"pf":"flutter_web"}

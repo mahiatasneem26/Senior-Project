@@ -1,7 +1,7 @@
+  
 import 'package:flutter/material.dart';
-import 'package:firebase/firebase.dart';
-import 'package:firststop/root_page.dart';
-import 'package:firststop/auth.dart';
+import 'package:firststop/pages/root_page.dart';
+import 'package:firststop/utils/auth.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,0 +1,1 @@
+{"isEntrypoint":true,"deps":["flutter|lib/material.dart","firststop|lib/pages/root_page.dart","firststop|lib/utils/auth.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":true}
