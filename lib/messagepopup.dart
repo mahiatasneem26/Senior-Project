@@ -8,12 +8,12 @@ void messagepopup(context) {
           child: new Wrap(
             children: <Widget>[
               new ListTile(
-                  leading: new Icon(Icons.music_note),
-                  title: new Text('Music'),
+                  leading: new Icon(Icons.group_add),
+                  title: new Text('Message Advisor'),
                   onTap: () => {}),
               new ListTile(
-                leading: new Icon(Icons.videocam),
-                title: new Text('Video'),
+                leading: new Icon(Icons.help),
+                title: new Text('Contact Help'),
                 onTap: () => {},
               ),
             ],

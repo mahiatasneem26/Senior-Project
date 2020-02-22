@@ -8,12 +8,12 @@ void boardpopup(context) {
           child: new Wrap(
             children: <Widget>[
               new ListTile(
-                  leading: new Icon(Icons.music_note),
-                  title: new Text('Music'),
+                  leading: new Icon(Icons.calendar_today),
+                  title: new Text('Personal TimeTable'),
                   onTap: () => {}),
               new ListTile(
-                leading: new Icon(Icons.videocam),
-                title: new Text('Video'),
+                leading: new Icon(Icons.subject),
+                title: new Text('Classes'),
                 onTap: () => {},
               ),
             ],

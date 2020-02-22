@@ -3,7 +3,7 @@ import 'package:last_stop/boardpopup.dart';
 import 'package:last_stop/bugpopup.dart';
 import 'package:last_stop/dashboard.dart';
 import 'package:last_stop/messagepopup.dart';
-import 'package:flutter/material.dart';
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -13,7 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(  
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -51,16 +51,25 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           IconButton(
             icon: Icon(
-              Icons.bug_report,
+              Icons.timer,
               color: Colors.red,
             ),
             onPressed: () {
               bugpopup(context);
             },
           ),
+          Text(
+          _getMonth() +
+              ", " +
+              DateTime.now().day.toString() +
+              "th " +
+              DateTime.now().year.toString(),
+          textAlign: TextAlign.center,
+          style: TextStyle(letterSpacing: 1.2, fontSize: 20.0),
+        ),
           IconButton(
             icon: Icon(
-              Icons.person,
+              Icons.exit_to_app,
               color: Colors.amber,
             ),
             onPressed: () {},
@@ -78,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
               UserAccountsDrawerHeader(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Colors.red, Colors.yellow],
+                    colors: [Colors.redAccent[400], Colors.pinkAccent],
                   ),
                 ),
                 accountName: Text(
@@ -103,65 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 leading: Icon(
                   Icons.dashboard,
-                  color: Colors.brown,
+                  color: Colors.blueAccent,
                 ),
                 title: Text(
                   "Dashboard",
                   style: TextStyle(
                     letterSpacing: 1.2,
-                    color: Colors.brown,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.chat_bubble_outline,
-                  color: Colors.deepPurple,
-                ),
-                title: Text(
-                  "GPA",
-                  style: TextStyle(
-                    letterSpacing: 1.2,
-                    color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.developer_board,
-                  color: Colors.green,
-                ),
-                title: Text(
-                  "Graduation Tracker",
-                  style: TextStyle(
-                    letterSpacing: 1.2,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              Divider(),
-              ListTile(
-                leading: Icon(
-                  Icons.settings,
-                  color: Colors.blue,
-                ),
-                title: Text(
-                  "Settings",
-                  style: TextStyle(
-                    letterSpacing: 1.2,
-                    color: Colors.blue,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -172,13 +129,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 leading: Icon(
                   Icons.person_outline,
-                  color: Colors.amber,
+                  color: Colors.blueAccent,
                 ),
                 title: Text(
                   "Profile",
                   style: TextStyle(
                     letterSpacing: 1.2,
-                    color: Colors.amber,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -186,17 +143,52 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.of(context).pop();
                 },
               ),
+              ListTile(
+                leading: Icon(
+                  Icons.chat_bubble_outline,
+                  color: Colors.blueAccent,
+                ),
+                title: Text(
+                  "GPA",
+                  style: TextStyle(
+                    letterSpacing: 1.2,
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.developer_board,
+                  color: Colors.blueAccent,
+                ),
+                title: Text(
+                  "Graduation Tracker",
+                  style: TextStyle(
+                    letterSpacing: 1.2,
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+             
               Divider(),
               ListTile(
                 leading: Icon(
                   Icons.developer_mode,
-                  color: Colors.lightBlue,
+                  color: Colors.blueAccent,
                 ),
                 title: Text(
                   "Classes",
                   style: TextStyle(
                     letterSpacing: 1.2,
-                    color: Colors.lightBlue,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -207,13 +199,32 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 leading: Icon(
                   Icons.call,
-                  color: Colors.deepOrange,
+                  color: Colors.blueAccent,
                 ),
                 title: Text(
                   "Financial Aid",
                   style: TextStyle(
                     letterSpacing: 1.2,
-                    color: Colors.deepOrange,
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+               Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  color: Colors.blueAccent,
+                ),
+                title: Text(
+                  "Settings",
+                  style: TextStyle(
+                    letterSpacing: 1.2,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -228,3 +239,34 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+String _getMonth() {
+  switch (DateTime.now().month.toString()) {
+    case "1":
+      return "Jan";
+    case "2":
+      return "Feb";
+    case "3":
+      return "Mar";
+    case "4":
+      return "Apr";
+    case "5":
+      return "May";
+    case "6":
+      return "Jun";
+    case "7":
+      return "Jul";
+    case "8":
+      return "Aug";
+    case "9":
+      return "Sep";
+    case "10":
+      return "Oct";
+    case "11":
+      return "Nov";
+    case "12":
+      return "Dec";
+    default:
+      return DateTime.now().month.toString();
+  }
+}
+
