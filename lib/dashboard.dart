@@ -204,63 +204,6 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
               ),
-              Card(
-                margin: EdgeInsets.all(40.0),
-                elevation: 3.0,
-                color: Colors.lightBlue[200],
-                child: Center(
-                  child: Text(
-                    "Tile 2",
-                    style: TextStyle(color: Colors.blue[900], fontSize: 30.0),
-                  ),
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.all(40.0),
-                elevation: 3.0,
-                color: Colors.orange[200],
-                child: Center(
-                  child: Text(
-                    "Tile 3",
-                    style: TextStyle(
-                        color: Colors.deepOrange[900], fontSize: 30.0),
-                  ),
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.all(40.0),
-                elevation: 3.0,
-                color: Colors.purple[200],
-                child: Center(
-                  child: Text(
-                    "Tile 4",
-                    style: TextStyle(
-                        color: Colors.deepPurple[900], fontSize: 30.0),
-                  ),
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.all(40.0),
-                elevation: 3.0,
-                color: Colors.brown[200],
-                child: Center(
-                  child: Text(
-                    "Tile 5",
-                    style: TextStyle(color: Colors.brown[900], fontSize: 30.0),
-                  ),
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.all(40.0),
-                elevation: 3.0,
-                color: Colors.amber[200],
-                child: Center(
-                  child: Text(
-                    "Tile 6",
-                    style: TextStyle(color: Colors.orange[900], fontSize: 30.0),
-                  ),
-                ),
-              ),
             ],
           ),
         ),

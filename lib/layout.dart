@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: Text(
-                "Material Dashboard",
+                "First Stop",
                 style: TextStyle(letterSpacing: 1.2),
               ),
             ),
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 accountName: Text(
-                  "Ashutosh Sharma",
+                  "Student Name",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20.0,
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   colors: Colors.deepPurple,
                 ),
                 accountEmail: Text(
-                  "asrma.sharma@gmail.com",
+                  "student@example.com",
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.deepPurple,
                 ),
                 title: Text(
-                  "Chatting",
+                  "GPA",
                   style: TextStyle(
                     letterSpacing: 1.2,
                     color: Colors.deepPurple,
@@ -140,27 +140,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.green,
                 ),
                 title: Text(
-                  "Developer Board",
+                  "Graduation Tracker",
                   style: TextStyle(
                     letterSpacing: 1.2,
                     color: Colors.green,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.bug_report,
-                  color: Colors.red,
-                ),
-                title: Text(
-                  "Bug Tracker",
-                  style: TextStyle(
-                    letterSpacing: 1.2,
-                    color: Colors.red,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -210,7 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.lightBlue,
                 ),
                 title: Text(
-                  "About",
+                  "Classes",
                   style: TextStyle(
                     letterSpacing: 1.2,
                     color: Colors.lightBlue,
@@ -227,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.deepOrange,
                 ),
                 title: Text(
-                  "Contact",
+                  "Financial Aid",
                   style: TextStyle(
                     letterSpacing: 1.2,
                     color: Colors.deepOrange,
