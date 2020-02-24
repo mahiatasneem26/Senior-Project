@@ -185,6 +185,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.blueAccent,
                 ),
                 title: Text(
+
+                  
                   "Classes",
                   style: TextStyle(
                     letterSpacing: 1.2,
@@ -224,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Settings",
                   style: TextStyle(
                     letterSpacing: 1.2,
-                    color: Colors.blueAccent,
+                    color: Colors.blue,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

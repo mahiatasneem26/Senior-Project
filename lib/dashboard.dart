@@ -6,6 +6,87 @@ class Dashboard extends StatefulWidget {
   _DashboardState createState() => _DashboardState();
 }
 
+class _DashboardState extends State<Dashboard> {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      backgroundColor: Colors.grey[50],
+      appBar: new AppBar(
+        title: new Text("Profile"),
+        centerTitle: true,
+        backgroundColor: Colors.blueAccent,
+        elevation: 0.0,
+      ),
+      body: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              CircleAvatar(
+                backgroundImage: AssetImage('assets/teacher.png'),
+                backgroundColor: Colors.red[50],
+                radius: 80.0,
+              ),
+              Divider(color: Colors.blue[600], height: 20.0),
+              Text('Advisor Name',
+                  style: TextStyle(
+                    color: Colors.blueAccent,
+                    letterSpacing: 1.5,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  )),
+              SizedBox(height: 10.0),
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.email,
+                    color: Colors.redAccent
+                  ),
+                  SizedBox(width: 10.0),
+                  Text('advisor@example.com',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 10.0,
+                        letterSpacing: 1.0,
+                      )),
+                  SizedBox(width: 20.0),
+                  Icon(
+                    Icons.phone,
+                    color: Colors.redAccent,
+                  ),
+                  SizedBox(width: 10.0),
+                  Text('111-111-2222',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 10.0,
+                        letterSpacing: 1.0,
+                      ))
+                ],
+              ),
+              Row(
+                children: <Widget> [
+                    Icon(
+                    Icons.calendar_today,
+                    color: Colors.redAccent,
+                  ),
+                  SizedBox(width: 10.0),
+                Text('MWF 12pm - 4pm',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 10.0,
+                        letterSpacing: 1.0,
+                      )
+                  )
+              ],
+              ),
+              SizedBox(width: 20.0),
+              // _getHeader(context),
+            ],
+          )),
+    );
+  }
+}
+
 Widget _getHeader(context) {
   if (MediaQuery.of(context).size.width <= 600) {
     return Column(
@@ -15,7 +96,7 @@ Widget _getHeader(context) {
           padding: EdgeInsets.symmetric(horizontal: 10.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25.0),
-            color: Colors.lightBlue[300],
+            color: Colors.black,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +112,7 @@ Widget _getHeader(context) {
                   ),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  color: Colors.blue[900],
+                  color: Colors.black,
                   onPressed: () {},
                 ),
               ),
@@ -58,7 +139,7 @@ Widget _getHeader(context) {
                   ),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  color: Colors.blue[900],
+                  color: Colors.black,
                   onPressed: () {},
                 ),
               ),
@@ -176,38 +257,5 @@ String _getMonth() {
       return "Dec";
     default:
       return DateTime.now().month.toString();
-  }
-}
-
-class _DashboardState extends State<Dashboard> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _getHeader(context),
-        Expanded(
-          child: GridView(
-            padding: EdgeInsets.only(top: 20.0),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: MediaQuery.of(context).size.width >= 1300
-                    ? 3
-                    : MediaQuery.of(context).size.width >= 700 ? 2 : 1),
-            children: <Widget>[
-              Card(
-                margin: EdgeInsets.all(40.0),
-                elevation: 3.0,
-                color: Colors.lightGreen[200],
-                child: Center(
-                  child: Text(
-                    "Tile 1",
-                    style: TextStyle(color: Colors.green[900], fontSize: 30.0),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
   }
 }
