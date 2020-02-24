@@ -84,31 +84,33 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              UserAccountsDrawerHeader(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Colors.redAccent[400], Colors.pinkAccent],
-                  ),
-                ),
+               CircleAvatar(
+                backgroundImage: AssetImage('assets/student.png'),
+                backgroundColor: Colors.red[50],
+                radius: 80.0,
+              ),
+              Container(
+                height: 90.0,
+                color: Colors.grey[50],
+              child: UserAccountsDrawerHeader(
                 accountName: Text(
-                  "Student Name",
+                  "Jane Doe",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.redAccent,
                     fontSize: 20.0,
                     letterSpacing: 1.2,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                currentAccountPicture: FlutterLogo(
-                  colors: Colors.deepPurple,
-                ),
-                accountEmail: Text(
-                  "student@example.com",
+                 accountEmail: Text(
+                  "jane.doe@example.com",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.redAccent,
                   ),
                 ),
               ),
+              ),
+               
               ListTile(
                 leading: Icon(
                   Icons.dashboard,

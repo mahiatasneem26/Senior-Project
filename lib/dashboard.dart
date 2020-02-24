@@ -80,7 +80,7 @@ class _DashboardState extends State<Dashboard> {
               ],
               ),
               SizedBox(width: 20.0),
-              // _getHeader(context),
+              _getHeader(context),
             ],
           )),
     );
@@ -88,7 +88,6 @@ class _DashboardState extends State<Dashboard> {
 }
 
 Widget _getHeader(context) {
-  if (MediaQuery.of(context).size.width <= 600) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
@@ -157,77 +156,7 @@ Widget _getHeader(context) {
         ),
       ],
     );
-  } else {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.lightBlue[300],
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20.0),
-                child: RaisedButton(
-                  child: Text(
-                    "Today",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
-                  color: Colors.blue[900],
-                  onPressed: () {},
-                ),
-              ),
-              RaisedButton(
-                child: Text(
-                  "Month",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
-                color: Colors.blue[900],
-                onPressed: () {},
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20.0),
-                child: RaisedButton(
-                  child: Text(
-                    "Year",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0)),
-                  color: Colors.blue[900],
-                  onPressed: () {},
-                ),
-              ),
-            ],
-          ),
-        ),
-        Text(
-          _getMonth() +
-              ", " +
-              DateTime.now().day.toString() +
-              "th " +
-              DateTime.now().year.toString(),
-          textAlign: TextAlign.end,
-          style: TextStyle(letterSpacing: 1.2, fontSize: 20.0),
-        ),
-      ],
-    );
-  }
-}
+  } 
 
 String _getMonth() {
   switch (DateTime.now().month.toString()) {
